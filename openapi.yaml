@@ -11380,7 +11380,7 @@ components:
         custom_rate:
           description: Amount that will be charged for every billing_cycle.
           example: 1050.5
-          format: float
+          format: double
           type: number
         switch_uuid:
           description: Switch short id. This can be used to determine if two devices
@@ -12275,7 +12275,7 @@ components:
         spot_instance:
           type: boolean
         spot_price_max:
-          format: float
+          format: double
           type: number
         termination_time:
           format: date-time
@@ -12359,14 +12359,14 @@ components:
           description: Deprecated. Use ip_addresses. Subnet range for addresses allocated
             to this device. Your project must have addresses available for a non-default
             request.
-          format: integer
-          type: number
+          format: int32
+          type: integer
           x-deprecated: true
         private_ipv4_subnet_size:
           description: Deprecated. Use ip_addresses. Subnet range for addresses allocated
             to this device.
-          format: integer
-          type: number
+          format: int32
+          type: integer
           x-deprecated: true
         ip_addresses:
           description: |-
@@ -13593,7 +13593,7 @@ components:
         licensee_product:
           $ref: '#/components/schemas/Href'
         size:
-          type: number
+          type: integer
         project:
           $ref: '#/components/schemas/Href'
       type: object
@@ -13606,7 +13606,7 @@ components:
         description:
           type: string
         size:
-          type: number
+          type: integer
         licensee_product_id:
           type: string
       type: object
@@ -13618,7 +13618,7 @@ components:
         description:
           type: string
         size:
-          type: number
+          type: integer
       type: object
     LicenseList:
       example:
@@ -13962,16 +13962,16 @@ components:
         address_family:
           description: Address Family for IP Address. Accepted values are 4 or 6
           example: 4.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         customer_as:
           description: The customer's ASN. In a local BGP deployment, this will be
             an internal ASN used to route within the data center. For a global BGP
             deployment, this will be the your own ASN, configured when you set up
             BGP for your project.
           example: 65000.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         customer_ip:
           description: The device's IP address. For an IPv4 BGP session, this is typically
             the private bond0 address for the device.
@@ -13989,8 +13989,8 @@ components:
         peer_as:
           description: The Peer ASN to use when configuring BGP on your device.
           example: 65530.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         peer_ips:
           description: A list of one or more IP addresses to use for the Peer IP section
             of your BGP configuration. For non-multihop sessions, this will typically
@@ -14894,7 +14894,7 @@ components:
         terms:
           type: integer
         credit_amount:
-          format: float
+          format: double
           type: number
         customdata:
           properties: {}
@@ -15793,7 +15793,7 @@ components:
         quantity:
           type: integer
         amount:
-          format: float
+          format: double
           type: number
         term:
           type: string
@@ -15830,7 +15830,7 @@ components:
         quantity:
           type: integer
         amount:
-          format: float
+          format: double
           type: number
         term:
           type: string
@@ -15860,7 +15860,7 @@ components:
         devices_max:
           type: integer
         max_bid_price:
-          format: float
+          format: double
           type: number
         created_at:
           format: date-time
@@ -15967,7 +15967,7 @@ components:
         devices_max:
           type: integer
         max_bid_price:
-          format: float
+          format: double
           type: number
         end_at:
           format: date-time
@@ -17841,7 +17841,7 @@ components:
         price: 0.8008282
       properties:
         price:
-          format: float
+          format: double
           type: number
       type: object
     SpotPricesHistoryReport:
@@ -17867,7 +17867,7 @@ components:
       type: object
     SpotPricesDatapointsList:
       items:
-        type: number
+        type: integer
       type: array
     NewPassword:
       example:
@@ -18581,7 +18581,7 @@ components:
         vlan:
           description: 'The VLAN id of the Virtual Network record associated to this
             Metal Gateway. Example: 1001.'
-          type: number
+          type: integer
         href:
           type: string
       type: object
@@ -18673,8 +18673,8 @@ components:
         address_family:
           description: Address Family for IP Address
           example: 4.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         public:
           default: true
           description: Address Type for IP Address
@@ -18685,8 +18685,8 @@ components:
             the operating system been provisioned (28..32 for IPv4 addresses, 124..127
             for IPv6 addresses).
           example: 28.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         ip_reservations:
           description: UUIDs of any IP reservations to use when assigning IPs
           items:
@@ -18815,8 +18815,8 @@ components:
         address_family:
           description: Address Family for IP Address
           example: 4.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         public:
           default: true
           description: Address Type for IP Address
@@ -18827,8 +18827,8 @@ components:
             the operating system being provisioned. (28..32 for IPv4 addresses, 124..127
             for IPv6 addresses)
           example: 28.0
-          format: integer
-          type: number
+          format: int32
+          type: integer
         ip_reservations:
           description: UUIDs of any IP reservations to use when assigning IPs
           items:
@@ -18878,7 +18878,7 @@ components:
           - monthly
           type: string
         count:
-          type: number
+          type: integer
       type: object
     SpotMarketRequestCreateInput_instance_attributes:
       example:
